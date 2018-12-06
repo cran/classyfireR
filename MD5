@@ -1,6 +1,6 @@
-62c7ccb1e77ea1630e26399e3f335758 *DESCRIPTION
+716240c1109d26fc13ef6bb4409c95a7 *DESCRIPTION
 fe72d3d587afe77e42c56aedf4387538 *NAMESPACE
-55c31a37c2ac513a88bc6db582dcf17f *NEWS.md
+faff302f9e7171552fd0f996ee6ed06a *NEWS.md
 23cfadf2300be34dac65ca148c0d22e8 *R/entity_classification.R
 ea79315de89caf87c34277d07de7017f *R/get_status_code.R
 934377cf7dd566d95f1d065c00e17822 *R/internals.R
@@ -8,7 +8,7 @@ ea79315de89caf87c34277d07de7017f *R/get_status_code.R
 944c0eaa60f1ab1b5009757357e3e81c *R/submit_classification.R
 4d3bc34c4fc745bdc559af54a9b89567 *R/zzz.R
 f35d1d8c6fbe68e6628b97d491a691b5 *inst/CITATION
-f4ad41a817f01c572929014c3a52632e *inst/classyfireR-manual.pdf
+7b01febbf140ee8772cf501759823add *inst/classyfireR-manual.pdf
 9068b6532ffb6818ed1c8aea0d921b27 *man/entity_classification.Rd
 5774e8d55992a3de2457e445e94a6057 *man/get_status_code.Rd
 e0fac1ecd4c3374db29c4afcbca5e1b8 *man/parse_json_output.Rd
@@ -16,4 +16,4 @@ b48fab23d8e73c35836dfe19df8b4e16 *man/retrieve_classification.Rd
 a98a4e4b659193a07fc0e42f864c64d1 *man/submit_classification.Rd
 5ee4cf26402259129ffe46b4545974b5 *tests/testthat.R
 2794b1b362756f69feb784ae6ee5567f *tests/testthat/test-classification.R
-80b74fcf3a9e24cf9fe5d108cd566e2f *tests/testthat/test-submission.R
+4f5660fa00247e10f10b4da2d97406d6 *tests/testthat/test-submission.R
