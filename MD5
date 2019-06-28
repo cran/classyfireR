@@ -1,12 +1,12 @@
-346b6d860ef7bb7a19a04966fe120f7d *DESCRIPTION
+253d7989d356ff92c9652bac357a8741 *DESCRIPTION
 7cfd8b368c244d55f1969c56b68cb46e *NAMESPACE
-bdaffbdf5bafe5a128bfa511dbd94651 *NEWS.md
+13961fed470270ad87005b989f856bc5 *NEWS.md
 3c8040a1a38202452b11e0d3f5655827 *R/classyfireR.R
 b6c965c931e53f6f0b7aa501aa2e6c3b *R/get_classification.R
-e93760ad991b88a4453fae97b319e92d *R/internals.R
+fc4fd576842dfd0e439e60ab62a3b8ef *R/internals.R
 4d3bc34c4fc745bdc559af54a9b89567 *R/zzz.R
 81fabd51140c196c192327418472f80a *inst/CITATION
-613e6d5bf102070d1f3fa4007553fdee *inst/classyfireR-manual.pdf
+48038fb8f95d27e49a3bfa6fb751f3f2 *inst/classyfireR-manual.pdf
 a34ce3daec97d347df47bf7267f4e9f0 *man/get_classification.Rd
 e0fac1ecd4c3374db29c4afcbca5e1b8 *man/parse_json_output.Rd
 5ee4cf26402259129ffe46b4545974b5 *tests/testthat.R
