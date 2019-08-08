@@ -10,6 +10,7 @@
 #' * __CHEMONT__ Chemical Ontology Identification code
 #'
 #' @examples
+#' \dontrun{
 #'
 #' # Valid InChI key where all four classification levels are available
 #' get_classification('BRMWTNUJHUMWMS-LURJTMIESA-N')
@@ -30,9 +31,7 @@
 #' 'BRMWTNUJHUMWMS-LURJTMIESA-N',
 #' 'XFNJVJPLKCPIBV-UHFFFAOYSA-N',
 #' 'TYEYBOSBBBHJIV-UHFFFAOYSA-N',
-#' 'AFENDNXGAFYKQO-UHFFFAOYSA-N',
-#' 'WHEUWNKSCXYKBU-QPWUGHHJSA-N',
-#' 'WHBMMWSBFZVSSR-GSVOUGTGSA-N')
+#' 'AFENDNXGAFYKQO-UHFFFAOYSA-N')
 #'
 #'  classification_list <- map(keys, get_classification)
 #'
@@ -56,7 +55,7 @@
 #'     )
 #'
 #'  print(classification_tibble)
-#'
+#'}
 #'
 #'
 #' @export
@@ -67,6 +66,10 @@ get_classification <- function(inchi_key)
   entity_query <- paste0(entity_url, inchi_key, '.json')
 
   response <- httr::GET(entity_query)
+
+  if (response$status_code == 429) {
+    stop('Request rate limit exceeded!')
+  }
 
   if (response$status_code == 404) {
     message(crayon::red(clisymbols::symbol$cross, inchi_key))
@@ -79,8 +82,7 @@ get_classification <- function(inchi_key)
     json_res <- jsonlite::fromJSON(text_content)
 
     classification <- parse_json_output(json_res)
-
-
     return(classification)
   }
+
 }

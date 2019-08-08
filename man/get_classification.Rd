@@ -21,6 +21,7 @@ a \code{tibble} containing the following;
 Retrieve entity classification from `http://classyfire.wishartlab.com/entities/'
 }
 \examples{
+\dontrun{
 
 # Valid InChI key where all four classification levels are available
 get_classification('BRMWTNUJHUMWMS-LURJTMIESA-N')
@@ -41,9 +42,7 @@ get_classification('MDHYEMXUFSJLGV-UHFFFAOYSA-B')
 'BRMWTNUJHUMWMS-LURJTMIESA-N',
 'XFNJVJPLKCPIBV-UHFFFAOYSA-N',
 'TYEYBOSBBBHJIV-UHFFFAOYSA-N',
-'AFENDNXGAFYKQO-UHFFFAOYSA-N',
-'WHEUWNKSCXYKBU-QPWUGHHJSA-N',
-'WHBMMWSBFZVSSR-GSVOUGTGSA-N')
+'AFENDNXGAFYKQO-UHFFFAOYSA-N')
 
  classification_list <- map(keys, get_classification)
 
@@ -67,7 +66,7 @@ get_classification('MDHYEMXUFSJLGV-UHFFFAOYSA-B')
     )
 
  print(classification_tibble)
-
+}
 
 
 }

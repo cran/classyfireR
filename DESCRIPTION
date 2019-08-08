@@ -1,10 +1,10 @@
 Package: classyfireR
 Type: Package
 Title: R Interface to the ClassyFire RESTful API
-Version: 0.2.1
-Date: 2019-06-28
+Version: 0.2.2
+Date: 2019-08-08
 Authors@R: c(
-    person("Tom", "Wilson", , "tpw2@aber.ac.uk", c("aut", "cre")),
+    person("Tom", "Wilson", , "tpw2@aber.ac.uk", c("aut", "cre"),  comment = c(ORCID = "0000-0003-3112-4682")),
     person("Jasen", "Finch", , "jsf9@aber.ac.uk", "aut"))
 Description: Access to the ClassyFire RESTful API <http://classyfire.wishartlab.com>. Retrieve existing entity classifications and submit new entities for classification. 
 Depends: magrittr
@@ -18,9 +18,9 @@ URL: https://github.com/aberHRML/classyfireR
 BugReports: https://github.com/aberHRML/classyfireR/issues
 RoxygenNote: 6.1.1
 NeedsCompilation: no
-Packaged: 2019-06-28 12:30:14 UTC; tom
-Author: Tom Wilson [aut, cre],
+Packaged: 2019-08-08 20:36:34 UTC; tpw2
+Author: Tom Wilson [aut, cre] (<https://orcid.org/0000-0003-3112-4682>),
   Jasen Finch [aut]
 Maintainer: Tom Wilson <tpw2@aber.ac.uk>
 Repository: CRAN
-Date/Publication: 2019-06-28 13:10:04 UTC
+Date/Publication: 2019-08-08 21:00:02 UTC
