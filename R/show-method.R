@@ -1,6 +1,7 @@
 #' show-ClassyFire
 #' @rdname show
 #' @param object a `ClassyFire` S4 object
+#' @importFrom methods show
 #' @export
 
 setMethod('show', signature = 'ClassyFire',
@@ -26,6 +27,9 @@ setMethod('show', signature = 'ClassyFire',
             )), '\n')
 
 
+
+            if(nrow(object@classification) > 0){
+
             TreeList <- list()
             for (i in seq_along(object@classification$Level)) {
               if (i == length(object@classification$Level)) {
@@ -50,5 +54,6 @@ setMethod('show', signature = 'ClassyFire',
               )
 
            print(cli::tree(TreeDF))
+            }
 
           })
