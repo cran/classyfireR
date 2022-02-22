@@ -1,5 +1,6 @@
 ## ---- include = FALSE---------------------------------------------------------
 knitr::opts_chunk$set(
+  
   collapse = TRUE,
   comment = "#>"
 )
@@ -27,30 +28,23 @@ InChI_Keys <-
 Classification_List <- purrr::map(InChI_Keys, get_classification)
 
 
-## ----Query--------------------------------------------------------------------
-Input <- c(MOL1 = 'CCCOCC', MOL2 = 'CNC(CC1=CN=CN1)C(=O)O')
-
-Query <-
-  submit_query(label = 'query_test',
-               input = Input,
-               type = 'STRUCTURE')
-
-
-
-Query
-
-
-## ----Accessor-----------------------------------------------------------------
+## ----Accessor, echo=TRUE, eval=TRUE-------------------------------------------
 
 classification(Classification)
-classification(Query)
 
 
 meta(Classification)
-meta(Query)
 
 
 chebi(Classification)
-chebi(Query)
 
+
+## ---- local_cache, echo=TRUE, eval=FALSE--------------------------------------
+#  ClassyFireDB <- RSQLite::dbConnect(RSQLite::SQLite(), 'ClassyFireCache.db')
+
+## ---- open_cache, echo=TRUE, eval=FALSE---------------------------------------
+#  ClassyFireCache <- open_cache(dbname = 'ClassyFireCache.db')
+
+## ---- run_cache, echo=TRUE, eval=FALSE----------------------------------------
+#  get_classification('BRMWTNUJHUMWMS-LURJTMIESA-N', conn = ClassyFireCache)
 

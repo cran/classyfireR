@@ -1,6 +1,7 @@
 #' show-ClassyFire
 #' @rdname show
 #' @param object a `ClassyFire` S4 object
+#' @return NULL
 #' @importFrom methods show
 #' @export
 
@@ -91,5 +92,18 @@ setMethod('show', signature = 'Query',
 
             cat('\n')
 
+            if (length(object@unclassified) > 0) {
+              cat(crayon::yellow(paste0(
+                length(object@unclassified), ' structures not classified'
+              )), '\n')
+
+              for (i in seq_along(object@unclassified)) {
+                cat(cli::cat_bullet(paste0(
+                  names(object@unclassified)[i], ' : ',
+                  object@unclassified[i]
+                )))
+              }
+
+            }
 
           })
